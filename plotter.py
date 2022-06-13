@@ -30,6 +30,19 @@ def remove_anomalies(actual, predict):
     ac, pr = np.delete(actual, anomaly_idx), np.delete(predict, anomaly_idx)
     return ac, pr, len(anomaly_idx[0])
 
+def plot_RFECV(label, visualizer):
+    plt.figure(figsize=(9, 6))
+    plt.title(f'{label}, number of features VS CV scores')
+    plt.xlabel("Number of features selected")
+    plt.ylabel("Cross validation score (accuracy)")
+    plt.plot(
+        range(1, len(visualizer.grid_scores_) + 1),
+        visualizer.grid_scores_
+    )
+    plt.vlines(x=visualizer.n_features_, ymin=min(visualizer.grid_scores_), ymax=max(visualizer.grid_scores_), colors='red', linestyles='dashed', label=f'feature length: {visualizer.n_features_}')
+    plt.legend()
+    plt.show()
+
 def chemeq(x):
     '''
     python chemical equation label for plot
