@@ -1,1 +1,2 @@
-# Evo_prediction_ml
+# Oxygen Vacancy Formation Energy (E_{vo}) prediction with ML
+
