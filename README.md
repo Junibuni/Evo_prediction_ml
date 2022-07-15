@@ -1,4 +1,4 @@
-# Oxygen Vacancy Formation Energy ($$E_{vo}$$) prediction with ML
+# Oxygen Vacancy Formation Energy ($E_{vo}$) prediction with ML
 ## Modifying different material featurising schemes - Composition Based Feature Vectors
 
 ML model: Random Forest, Gradient Boosting, XGBoost
